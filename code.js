@@ -8,20 +8,21 @@
 //Snap, 2, Snap, 4, SnapCrackle, 6, Snap, 8, Snap, Crackle, Snap, 12,
 //CHRIS + BREAKROOM #2
 //RANDY DEMO
+//Cesar
 
-function snapCrackle(b) {
-  let c = " ";
-  for (let i = 1; i <= b; i++) {
-    if (i % 2 == 1 && i % 5 == 0) {
-      c += "snapcrackle, " + i;
-    } else if (i % 5 == 0) {
-      c += "crackle, " + i;
-    } else if (i % 2 == 1) {
-      c += "snap, " + i;
-    } else {
-      c += " ,";
+function snapCrackle(maxValue) {
+  let c = ""
+  for (let i = 1; i <= maxValue; i++) {
+    if (i % 5 === 0 && i % 2 != 0) {
+      c += "snapCrackle, "
+    } else if (i % 5 === 0) {
+      c += "Crackle, "
+    } else if (i % 2 != 0) {
+      c += "snap, "
+    } else if (i % 2 === 0) {
+      c += i + ", "
     }
   }
-  console.log(c);
+  return c
 }
-snapCrackle(15);
+console.log(snapCrackle(12))
